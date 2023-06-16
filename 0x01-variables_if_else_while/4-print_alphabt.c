@@ -5,15 +5,15 @@
  */
 int main(void)
 {
-        int c;
+	int c;
 
-        for (c  = 97 ; c < 123 ; c++)
-        {
+	for (c  = 97 ; c < 123 ; c++)
+	{
 	if (c != 113 && c != 101)
 	{
 	putchar(c);
 	}
-        }
-        putchar('\n');
-        return (0);
+	}
+	putchar('\n');
+	return (0);
 }
