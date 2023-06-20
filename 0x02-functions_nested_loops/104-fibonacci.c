@@ -2,7 +2,6 @@
 
 /**
  * main - fibonacci <3
- *
  * Purpose - no hardcode
  * Return:  (Success)
  */
@@ -17,6 +16,7 @@ int main(void)
 	unsigned long int bef2;
 	unsigned long int aft1;
 	unsigned long int aft2;
+
 	printf("%lu", bef);
 	for (i = 1; i < 91; i++)
 	{
