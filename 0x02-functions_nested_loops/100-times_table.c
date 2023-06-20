@@ -1,5 +1,8 @@
 #include "main.h"
 
+void print_times_row(int row_num, int n);
+void print_times_cell(int value);
+
 /**
  * print_times_table - prints the n times table, starting with 0
  * @n: number of the times table
@@ -8,12 +11,12 @@ void print_times_table(int n)
 {
 	if (n >= 0 && n <= 15)
 	{
-	int i, j;
+	int i;
 
 	for (i = 0; i <= n; i++)
 	{
 	print_times_row(i, n);
-	 _putchar('\n');
+	_putchar('\n');
 	}
 	}
 }
@@ -39,7 +42,7 @@ void print_times_row(int row_num, int n)
  * @value: value of the cell to be printed
  */
 void print_times_cell(int value)
-{
+	{
 	if (value < 10)
 	{
 	_putchar(',');
@@ -63,9 +66,10 @@ void print_times_cell(int value)
 	_putchar(value + '0');
 	}
 	else if (value < 100)
-
+	{
 	_putchar((value / 10) + '0');
-        _putchar((value % 10) + '0');
+	_putchar((value % 10) + '0');
+	}
 	else
 	{
 	_putchar((value / 100) + '0');
