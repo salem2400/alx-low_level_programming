@@ -7,7 +7,7 @@
 int main(void)
 {
 	_puts_recursion("Puts with recursion");
-	if (*s == '\0')
+	if (s == '\0')
 	{
 		_putchar('\n');
 		return (0);
