@@ -2,6 +2,8 @@
 
 /**
  * main - check the code
+ * _puts_recursion - print the string follwoed by new line
+ * @s: point to the firest char in string
  * Return: Always 0.
  */
 void _puts_recursion(char *s)
