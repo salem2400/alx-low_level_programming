@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * main - check the code
- * _puts_recursion: print the string follwoed by new line
+ * _puts_recursion - print the string followed by a new line
  * @s: point to the firest char in string
  * Return: Always 0.
  */
