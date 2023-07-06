@@ -13,7 +13,7 @@ int _strlen_recursion(char *s)
 {
 	int n;
 
-	if (strlen != '\0')
+	if (strlen(s) != '\0')
 	{
 	n = strlen(s);
 	printf("%i\n", n);
