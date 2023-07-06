@@ -10,7 +10,7 @@
  */
 
 int _strlen_recursion(char *s)
-{
+	{
 	int n;
 
 	if (strlen(s) != '\0')
@@ -19,7 +19,7 @@ int _strlen_recursion(char *s)
 	printf("%i\n", n);
 	return (strlen(s));
 	}
-}
+	}
 
 int main(void)
 {
