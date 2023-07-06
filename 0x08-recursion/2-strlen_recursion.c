@@ -10,14 +10,12 @@
  */
 
 int _strlen_recursion(char *s)
-	{
-	int n;
+{
 
-	if (strlen(s) != '\0')
+	if (strlen(s) == '\0')
 	{
-	n = _strlen_recursion("Corbin Coleman");
-	printf("%i\n", n);
-	return (strlen(s));
+		_strlen_recursion("Corbin Coleman");
+		return (strlen(s));
 	}
 	return (0);
 	}
