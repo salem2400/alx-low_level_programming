@@ -24,4 +24,5 @@ int _strlen_recursion(char *s)
 int main(void)
 {
 	_strlen_recursion("Corbin Coleman");
+	return (0);
 }
