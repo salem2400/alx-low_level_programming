@@ -1,24 +1,23 @@
 #include "main.h"
-#include <stdlib.h>
 /**
- * create_array - create array of size size and assign char c
- * @size: size of array
- * @c: char to assign
+ * *create_array - function used to creat array
+ * @size: parameter storge the size of the array
+ * @c: parametar storge the value of all singel index in the array
+ * @*str: varuabel used to storg a pointer of the array
  * Description: create array of size size and assign char c
- * Return: pointer to array, NULL if fail
- *
+ * Return: null if the function fail
+ * and pointre str returnd if success
  */
 char *create_array(unsigned int size, char c)
 {
 	char *str;
-	unsigned int i;
+	int num;
 
 	str = malloc(sizeof(char) * size);
 	if (size == 0 || str == NULL)
 		return (NULL);
-
-	for (i = 0; i < size; i++)
-		str[i] = c;
+	for (num = 0 ; num < size ; num++)
+		str[num] = c;
+	free(str);
 	return (str);
 }
-
