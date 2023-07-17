@@ -1,12 +1,4 @@
-#include <stdio.h>
-#define ABS (X)
+#ifndef FUNCTION_LIKE_MACRO
+#define FUNCTION_LIKE_MACRO
+#define ABS (x) ((x) < (0) ? -(x) : (x))
 #endif
-/**
- * ABS -  computes the absolute value of (X)
- * Return: 0 (Success)
- */
-
-int ABS(void)
-{
-	return (0);
-}
