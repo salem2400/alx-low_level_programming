@@ -10,8 +10,8 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	init_dog = malloc(sizeof(init_dog));
-	if (init_dog != NUll)
+	d = malloc(sizeof(struct dog));
+	if (d != NUll)
 	{
 	d->name = name;
 	d->age = age;
