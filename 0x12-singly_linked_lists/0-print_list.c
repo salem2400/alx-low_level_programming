@@ -13,7 +13,10 @@ size_t print_list(const list_t *head)
 
 	while (i != '\0')
 	{
-		printf("[%u] %s\n", head->len, head->str);
+		if (head->str == NULL)
+			printf("[0] (nil)\n");
+		if (head->str != NULL)
+			printf("[%u] %s\n", head->len, head->str);
 		printf("[%u] %s\n", head->next->len, head->next->str);
 		i = head->len;
 		i = 0;
@@ -23,6 +26,7 @@ size_t print_list(const list_t *head)
 		y++;
 	}
 	}
+	
 
 	return (y);
 }
