@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdio.h>
 /**
  * print_list - orint the list elements
  * @h: have the elements
