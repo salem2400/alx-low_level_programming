@@ -13,21 +13,22 @@ void print_osabi_more(Elf64_Ehdr h);
  *print_magic - c prints ELF magic bytes
  * @h : Elf64_Ehdr struct
  */
- void print_magic(Elf64_Ehdr h)
- {
+void print_magic(Elf64_Ehdr h)
+{
 	int i;
+
 	printf("  magic:  ");
 	for (i = 0; i < EI_NIDENT; i++)
 		printf("%2.2x%s", h.e_ident[i], i == EI_NIDENT - 1 ? "\n" : "");
- }
- 
+}
+
 /**
  * print_class - prints ELF class
  * @h: the ELF header struct
  */
 void print_class(Elf64_Ehdr h)
 {
-	printf ("  Class:                             ");
+	printf("  Class:                             ");
 	switch (h.e_ident[EI_CLASS])
 	{
 		case ELFCLASS64:
@@ -66,7 +67,7 @@ void print_data(Elf64_Ehdr h)
 
 /**
  * print_version - prints FLF version
- * @h: the ELF header struct 
+ * @h: the ELF header struct
  */
 void print_version(Elf64_Ehdr h)
 {
@@ -86,7 +87,7 @@ void print_version(Elf64_Ehdr h)
 
 /**
  * print_osabi - prints FLF osabi
- * @h: the ELF header struct 
+ * @h: the ELF header struct
  */
 void print_osabi(Elf64_Ehdr h)
 {
@@ -116,7 +117,7 @@ void print_osabi(Elf64_Ehdr h)
 			break;
 		case ELFOSABI_FREEBSD:
 			printf("UNIX - FreeBSD");
-			break;		
+			break;
 		case ELFOSABI_TRU64:
 			printf("UNIX - TRU64");
 			break;
@@ -129,7 +130,7 @@ void print_osabi(Elf64_Ehdr h)
 
 /**
  * print_osabi_more - prints FLF osabi more
- * @h: the ELF header struct 
+ * @h: the ELF header struct
  */
 
 void print_osabi_more(Elf64_Ehdr h)
@@ -156,7 +157,7 @@ void print_osabi_more(Elf64_Ehdr h)
 
 /**
  * print_type - prints FLF osabi type
- * @h: the ELF header struct 
+ * @h: the ELF header struct
  */
 
 void print_type(Elf64_Ehdr h)
@@ -193,7 +194,7 @@ void print_type(Elf64_Ehdr h)
 
 /**
  * print_entry - prints FLF entry point address
- * @h: the ELF header struct 
+ * @h: the ELF header struct
  */
 
 void print_entry(Elf64_Ehdr h)
@@ -216,10 +217,10 @@ void print_entry(Elf64_Ehdr h)
 	{
 		i = 0;
 		len = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 : 3;
-		while(!p[i])
+		while (!p[i])
 			i++
 		printf("%x", p[i++])
-		for (; i <= len ;i++)
+		for (; i <= len ; i++)
 			printf("%02x", p[i]);
 		printf("\n");
 
